@@ -25,3 +25,6 @@ docker-compose run app sh -c "python manage.py test"
 
 Makemigrations
 docker-compose run app sh -c "python manage.py makemigrations core"
+
+For run the server
+docker compose up 
