@@ -31,3 +31,6 @@ docker compose up
 
 Create superuser
 docker-compose run app sh -c"python manage.py createsuperuser"
+
+docker-compose run --rm app sh -c "python manage.py startapp user"
+
