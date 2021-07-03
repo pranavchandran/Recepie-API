@@ -41,7 +41,14 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'core',
     'user',
+    'recipe',
 ]
+
+REST_FRAMEWORK = {
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+   'rest_framework.authentication.TokenAuthentication',
+   )
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,6 +132,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = '/vol/web/media'
+
+STATIC_ROOT = '/vol/web/static'
 
 # Customize usermodel
 AUTH_USER_MODEL = 'core.User'
